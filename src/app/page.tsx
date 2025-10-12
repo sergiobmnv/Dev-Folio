@@ -36,7 +36,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 // --- DATA ---
 const personalInfo = {
-  name: "Sergio",
+  name: "Sergio Bravo Mora",
   role: "Estudiante de Desarrollo Web",
   motto: "Persona proactiva, responsable, con buenas relaciones interpersonales y empática, con capacidad de trabajar en equipo y con ganas de crecer.",
   avatar: PlaceHolderImages.find(p => p.id === 'profile-avatar')?.imageUrl || "https://picsum.photos/seed/devfolio-avatar/400/400",
@@ -54,6 +54,7 @@ const skills = {
     { name: "React", icon: "react" },
     { name: "Next.js", icon: "nextjs" },
     { name: "Node.js", icon: "nodejs" },
+    { name: "Spring Boot", icon: "springboot" },
   ],
   soft: [
     "Resolución de problemas",
@@ -171,7 +172,12 @@ const TechIcons: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } = {
     <svg {...props} viewBox="0 0 24 24" >
         <path fill="currentColor" d="M20,3A2,2 0 0,1 22,5V19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19V5A2,2 0 0,1 4,3H20M14.5,14.25C14.5,15.5 13.6,16.5 12.38,16.5C11.33,16.5 10.5,15.65 10.5,14.53C10.5,13.37 11.41,12.5 12.63,12.5C12.83,12.5 13,12.5 13.15,12.55V10.38C13.15,10.38 13,10.36 12.75,10.36C11.5,10.36 9.85,11.18 9.85,12.83C9.85,14.15 10.5,15.5 12.13,15.5C13.6,15.5 14.5,14.55 14.5,13.2V11H15.85V10.05H14.5V9.11H15.85V8.16H14.5V6H13.15V8.16H11.85V9.11H13.15V10.33C12.8,10.33 12.5,10.25 12.5,10.25C11.36,10.25 10.5,10.95 10.5,12.18C10.5,13.32 11.4,14.25 12.6,14.25C13.5,14.25 14.5,13.5 14.5,11.9V11.23C14.5,11.23 15.2,11.3 15.5,11.75C16.15,12.5 15.8,14.25 14.5,14.25Z" />
     </svg>
-  )
+  ),
+  springboot: (props) => (
+    <svg {...props} viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12.38 21.03c-2.2-.42-3.85-2.44-3.85-4.75c0-2.61 2.14-4.75 4.75-4.75c.59 0 1.15.11 1.68.3c.41-.33.91-.55 1.46-.55c1.23 0 2.22 1 2.22 2.22c0 .4-.11.78-.3 1.11c.54.43.88.93.88 1.64c0 1.05-.85 1.9-1.9 1.9c-.19 0-.36-.03-.54-.08c-.43.9-.96 1.71-1.74 2.22a4.67 4.67 0 0 1-2.66.74m-.25-15.06c-3.32 0-6.09 2.7-6.09 6.02c0 .28.02.55.06.82c.04-.3.06-.6.06-.91c0-2.62 2.13-4.75 4.75-4.75c.59 0 1.15.11 1.68.3c.12-.53.2-1.09.2-1.68c0-1.23-1-2.23-2.23-2.23c-.56 0-1.06.21-1.48.56M18 4.78a2.23 2.23 0 0 0-3.3-1.07c.39.46.61 1.02.61 1.63c0 .59-.11 1.15-.3 1.68c.55.27 1.18.43 1.85.43c1.9 0 3.52-1.28 4.06-3.03c-.4.21-.86.36-1.35.36c-.6 0-1.15-.17-1.57-.4Z" />
+    </svg>
+  ),
 };
 
 const SkillCard = ({ icon, name }: { icon: string; name: string }) => {
