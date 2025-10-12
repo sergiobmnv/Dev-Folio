@@ -9,7 +9,6 @@ import {
   Code,
   Download,
   Github,
-  Linkedin,
   Mail,
   Moon,
   Sun,
@@ -45,10 +44,13 @@ const personalInfo = {
 };
 
 const skills = {
-  technical: [
+  languages: [
     { name: "HTML", icon: "html" },
     { name: "CSS", icon: "css" },
     { name: "JavaScript", icon: "javascript" },
+    { name: "Java", icon: "java" },
+  ],
+  frameworks: [
     { name: "React", icon: "react" },
     { name: "Next.js", icon: "nextjs" },
     { name: "Node.js", icon: "nodejs" },
@@ -165,6 +167,11 @@ const TechIcons: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } = {
       <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H9.5V11H7.5V9.5H11V17M17,17H15.5V12.25C15.5,11.56 15.22,11.12 14.34,11.12C13.5,11.12 13,11.53 13,12.34V17H11.5V9.5H13V10.5C13.3,9.92 13.94,9.5 14.67,9.5C15.82,9.5 17,10.3 17,11.93V17Z" />
     </svg>
   ),
+  java: (props) => (
+    <svg {...props} viewBox="0 0 24 24" >
+        <path fill="currentColor" d="M20,3A2,2 0 0,1 22,5V19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19V5A2,2 0 0,1 4,3H20M14.5,14.25C14.5,15.5 13.6,16.5 12.38,16.5C11.33,16.5 10.5,15.65 10.5,14.53C10.5,13.37 11.41,12.5 12.63,12.5C12.83,12.5 13,12.5 13.15,12.55V10.38C13.15,10.38 13,10.36 12.75,10.36C11.5,10.36 9.85,11.18 9.85,12.83C9.85,14.15 10.5,15.5 12.13,15.5C13.6,15.5 14.5,14.55 14.5,13.2V11H15.85V10.05H14.5V9.11H15.85V8.16H14.5V6H13.15V8.16H11.85V9.11H13.15V10.33C12.8,10.33 12.5,10.25 12.5,10.25C11.36,10.25 10.5,10.95 10.5,12.18C10.5,13.32 11.4,14.25 12.6,14.25C13.5,14.25 14.5,13.5 14.5,11.9V11.23C14.5,11.23 15.2,11.3 15.5,11.75C16.15,12.5 15.8,14.25 14.5,14.25Z" />
+    </svg>
+  )
 };
 
 const SkillCard = ({ icon, name }: { icon: string; name: string }) => {
@@ -277,9 +284,15 @@ const AboutSection = () => (
                 </p>
             </div>
              <div className="md:col-span-2">
-                <h3 className="text-2xl font-semibold mb-6 text-center md:text-left">Habilidades Técnicas</h3>
+                <h3 className="text-2xl font-semibold mb-6 text-center md:text-left">Lenguajes</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-10">
+                    {skills.languages.map((skill) => (
+                    <SkillCard key={skill.name} name={skill.name} icon={skill.icon} />
+                    ))}
+                </div>
+                <h3 className="text-2xl font-semibold mb-6 text-center md:text-left">Frameworks y Tecnologías</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                    {skills.technical.map((skill) => (
+                    {skills.frameworks.map((skill) => (
                     <SkillCard key={skill.name} name={skill.name} icon={skill.icon} />
                     ))}
                 </div>
@@ -449,9 +462,6 @@ const ContactSection = () => {
                             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                                 <Github className="h-10 w-10" />
                             </a>
-                            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                                <Linkedin className="h-10 w-10" />
-                            </a>
                             <a href="mailto:sergiobmnv@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                                 <Mail className="h-10 w-10" />
                             </a>
@@ -473,9 +483,6 @@ const Footer = () => (
       <div className="flex space-x-4">
         <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
           <Github className="h-5 w-5" />
-        </a>
-        <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-          <Linkedin className="h-5 w-5" />
         </a>
         <a href="mailto:sergiobmnv@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
           <Mail className="h-5 w-5" />
