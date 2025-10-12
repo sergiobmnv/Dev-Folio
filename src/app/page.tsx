@@ -39,8 +39,8 @@ const personalInfo = {
   name: "Sergio Bravo Mora",
   role: "Estudiante de Desarrollo Web",
   motto: "Persona proactiva, responsable, con buenas relaciones interpersonales y empática, con capacidad de trabajar en equipo y con ganas de crecer.",
-  avatar: PlaceHolderImages.find(p => p.id === 'profile-avatar')?.imageUrl || "https://picsum.photos/seed/devfolio-avatar/400/400",
-  avatarHint: PlaceHolderImages.find(p => p.id === 'profile-avatar')?.imageHint || "person programmer"
+  avatar: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjAuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS11c2VyLXJvdW5kIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjgiIHI9IjUiLz48cGF0aCBkPSJNMjAgMjFhOCA4IDAgMCAtMTYgMCIvPjwvc3ZnPg==",
+  avatarHint: "person avatar placeholder"
 };
 
 const skills = {
@@ -139,43 +139,59 @@ const TechIcons: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } = {
   nextjs: (props) => (
     <svg {...props} viewBox="0 0 128 128">
       <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M64 128C99.3462 128 128 99.3462 128 64C128 28.6538 99.3462 0 64 0C28.6538 0 0 28.6538 0 64C0 99.3462 28.6538 128 64 128ZM74.2462 95.9912L92.7055 57.3298H78.3113L78.3114 95.9912H74.2462ZM68.1812 95.9912V57.3298H53.787L35.3276 95.9912H49.7219L59.0833 76.2255L68.4447 95.9912H68.1812Z"
         fill="currentColor"
-        d="M64 128c35.346 0 64-28.654 64-64S99.346 0 64 0 0 28.654 0 64s28.654 64 64 64Z"
-      />
-      <path
-        fill="#fff"
-        d="M98.683 103.933V53.844h-10.15v48.332L59.84 68.32H44.136v35.613h10.15V71.378l28.691 32.555h15.706Z"
       />
     </svg>
   ),
   nodejs: (props) => (
-    <svg {...props} viewBox="0 0 256 256">
-      <path fill="currentColor" d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM96.49,180a8,8,0,0,1-13,0L44,121.61V144a8,8,0,0,1-16,0V112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H51.61L90.06,174A8,8,0,0,1,96.49,180ZM224,144a8,8,0,0,1-8,8H176.4l20.8,25a8,8,0,1,1-11.2,11.2L164,163.6l-22.4,22.4a8,8,0,0,1-11.2-11.2l25-25H144a8,8,0,0,1-8-8V112a8,8,0,0,1,8-8h32a8,8,0,0,1,8,8v12.8l16-16a8,8,0,0,1,11.2,11.2L198.4,136H216A8,8,0,0,1,224,144Z"/>
+    <svg {...props} viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M9,3V15H5V11H2V13H5V17H9V21H12.5A6.5,6.5 0 0,0 19,14.5V5A2,2 0 0,0 17,3H9M15.5,14.5A2.5,2.5 0 0,1 13,17H11V5H15A2,2 0 0,1 17,7V14.5A2.5,2.5 0 0,1 15.5,14.5Z"
+      />
     </svg>
   ),
   html: (props) => (
     <svg {...props} viewBox="0 0 24 24">
-      <path fill="currentColor" d="m21.49 4.l-1.42 16L12 22.54l-8.07-2.53L2.51 4H21.49M12 7.27l4.53 0l.19-2.17H12V7.27m-2.58 0h2.58V5.1H9.69l.06.66l.09 1.45M10.1 11.27H12v2.17h-2.19l-.11-1.3l-.06-.55l-.06-.32h.22m2.11 0l-.06 2.17H14.4l.33-3.61l.1-1.12l.1-1.11H12v2.17h.21" />
+      <path
+        fill="currentColor"
+        d="M1,9H3V11H5V9H7V11H9V9H11V5H13V9H15V5H17V9H19V5H21V9H23V1H1M21,11V13H19V15H17V13H15V15H13V13H11V15H9V13H7V15H5V13H3V15H1V11M3,23H5V21H7V23H9V21H11V17H13V21H15V17H17V21H19V17H21V21H23V15H1M3,3H5V5H7V3H9V5H11V3M15,3H17V5H19V3"
+      />
     </svg>
   ),
   css: (props) => (
     <svg {...props} viewBox="0 0 24 24">
-     <path fill="currentColor" d="M12 22.54L3.93 20L2.51 4h18.98L20.07 20L12 22.54m6.11-14.07H7.89l.19 2.17h7.93l-.23 2.58h-7.6l.19 2.17h7.1l-.36 3.86l-2.91.8l-2.91-.8l-.2-2.17H5.88l.38 4.34L12 19.31l5.73-1.59l.82-9.13" />
+      <path
+        fill="currentColor"
+        d="M1,9H3V7H5V9H7V7H9V9H11V5H13V9H15V5H17V9H19V5H21V9H23V1H1M3,23H5V21H7V23H9V21H11V17H13V21H15V17H17V21H19V17H21V21H23V15H1M3,3H5V5H7V3H9V5H11V3M15,3H17V5H19V3"
+      />
     </svg>
   ),
   javascript: (props) => (
     <svg {...props} viewBox="0 0 24 24">
-      <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H9.5V11H7.5V9.5H11V17M17,17H15.5V12.25C15.5,11.56 15.22,11.12 14.34,11.12C13.5,11.12 13,11.53 13,12.34V17H11.5V9.5H13V10.5C13.3,9.92 13.94,9.5 14.67,9.5C15.82,9.5 17,10.3 17,11.93V17Z" />
+      <path
+        fill="currentColor"
+        d="M1,3H23V5H1V3M1,7H23V9H1V7M1,11H23V13H1V11M1,15H23V17H1V15M1,19H23V21H1V19"
+      />
     </svg>
   ),
   java: (props) => (
-    <svg {...props} viewBox="0 0 24 24" >
-        <path fill="currentColor" d="M20,3A2,2 0 0,1 22,5V19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19V5A2,2 0 0,1 4,3H20M14.5,14.25C14.5,15.5 13.6,16.5 12.38,16.5C11.33,16.5 10.5,15.65 10.5,14.53C10.5,13.37 11.41,12.5 12.63,12.5C12.83,12.5 13,12.5 13.15,12.55V10.38C13.15,10.38 13,10.36 12.75,10.36C11.5,10.36 9.85,11.18 9.85,12.83C9.85,14.15 10.5,15.5 12.13,15.5C13.6,15.5 14.5,14.55 14.5,13.2V11H15.85V10.05H14.5V9.11H15.85V8.16H14.5V6H13.15V8.16H11.85V9.11H13.15V10.33C12.8,10.33 12.5,10.25 12.5,10.25C11.36,10.25 10.5,10.95 10.5,12.18C10.5,13.32 11.4,14.25 12.6,14.25C13.5,14.25 14.5,13.5 14.5,11.9V11.23C14.5,11.23 15.2,11.3 15.5,11.75C16.15,12.5 15.8,14.25 14.5,14.25Z" />
+    <svg {...props} viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M20,3A2,2 0 0,1 22,5V19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19V5A2,2 0 0,1 4,3H20M14.5,14.25C14.5,15.5 13.6,16.5 12.38,16.5C11.33,16.5 10.5,15.65 10.5,14.53C10.5,13.37 11.41,12.5 12.63,12.5C12.83,12.5 13,12.5 13.15,12.55V10.38C13.15,10.38 13,10.36 12.75,10.36C11.5,10.36 9.85,11.18 9.85,12.83C9.85,14.15 10.5,15.5 12.13,15.5C13.6,15.5 14.5,14.55 14.5,13.2V11H15.85V10.05H14.5V9.11H15.85V8.16H14.5V6H13.15V8.16H11.85V9.11H13.15V10.33C12.8,10.33 12.5,10.25 12.5,10.25C11.36,10.25 10.5,10.95 10.5,12.18C10.5,13.32 11.4,14.25 12.6,14.25C13.5,14.25 14.5,13.5 14.5,11.9V11.23C14.5,11.23 15.2,11.3 15.5,11.75C16.15,12.5 15.8,14.25 14.5,14.25Z"
+      />
     </svg>
   ),
   springboot: (props) => (
     <svg {...props} viewBox="0 0 24 24">
-      <path fill="currentColor" d="M12.38 21.03c-2.2-.42-3.85-2.44-3.85-4.75c0-2.61 2.14-4.75 4.75-4.75c.59 0 1.15.11 1.68.3c.41-.33.91-.55 1.46-.55c1.23 0 2.22 1 2.22 2.22c0 .4-.11.78-.3 1.11c.54.43.88.93.88 1.64c0 1.05-.85 1.9-1.9 1.9c-.19 0-.36-.03-.54-.08c-.43.9-.96 1.71-1.74 2.22a4.67 4.67 0 0 1-2.66.74m-.25-15.06c-3.32 0-6.09 2.7-6.09 6.02c0 .28.02.55.06.82c.04-.3.06-.6.06-.91c0-2.62 2.13-4.75 4.75-4.75c.59 0 1.15.11 1.68.3c.12-.53.2-1.09.2-1.68c0-1.23-1-2.23-2.23-2.23c-.56 0-1.06.21-1.48.56M18 4.78a2.23 2.23 0 0 0-3.3-1.07c.39.46.61 1.02.61 1.63c0 .59-.11 1.15-.3 1.68c.55.27 1.18.43 1.85.43c1.9 0 3.52-1.28 4.06-3.03c-.4.21-.86.36-1.35.36c-.6 0-1.15-.17-1.57-.4Z" />
+      <path
+        fill="currentColor"
+        d="M12.38 21.03c-2.2-.42-3.85-2.44-3.85-4.75c0-2.61 2.14-4.75 4.75-4.75c.59 0 1.15.11 1.68.3c.41-.33.91-.55 1.46-.55c1.23 0 2.22 1 2.22 2.22c0 .4-.11.78-.3 1.11c.54.43.88.93.88 1.64c0 1.05-.85 1.9-1.9 1.9c-.19 0-.36-.03-.54-.08c-.43.9-.96 1.71-1.74 2.22a4.67 4.67 0 0 1-2.66.74m-.25-15.06c-3.32 0-6.09 2.7-6.09 6.02c0 .28.02.55.06.82c.04-.3.06-.6.06-.91c0-2.62 2.13-4.75 4.75-4.75c.59 0 1.15.11 1.68.3c.12-.53.2-1.09.2-1.68c0-1.23-1-2.23-2.23-2.23c-.56 0-1.06.21-1.48.56M18 4.78a2.23 2.23 0 0 0-3.3-1.07c.39.46.61 1.02.61 1.63c0 .59-.11 1.15-.3 1.68c.55.27 1.18.43 1.85.43c1.9 0 3.52-1.28 4.06-3.03c-.4.21-.86.36-1.35.36c-.6 0-1.15-.17-1.57-.4Z"
+      />
     </svg>
   ),
 };
@@ -264,8 +280,8 @@ const HeroSection = () => (
       </div>
     </div>
     <div className="flex justify-center">
-      <div className="rounded-full overflow-hidden border-4 border-primary shadow-2xl w-[400px] h-[400px] flex items-center justify-center bg-muted">
-         <Image src={personalInfo.avatar} alt="Foto de perfil de Sergio Bravo Mora" width={400} height={400} className="w-full h-full object-cover" data-ai-hint={personalInfo.avatarHint}/>
+      <div className="rounded-full overflow-hidden border-4 border-primary shadow-2xl w-[400px] h-[400px] flex items-center justify-center bg-muted text-muted-foreground p-8">
+         <Image src={personalInfo.avatar} alt="Foto de perfil de Sergio Bravo Mora" width={400} height={400} className="w-full h-full object-contain" data-ai-hint={personalInfo.avatarHint}/>
       </div>
     </div>
   </section>
