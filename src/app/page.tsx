@@ -234,12 +234,6 @@ const Header = () => {
           <a href="#contacto" className="transition-colors hover:text-primary">Contacto</a>
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
-            <Button asChild variant="outline">
-                <a href="/cv-placeholder.pdf" download>
-                    <Download className="mr-2 h-4 w-4" />
-                    CV
-                </a>
-            </Button>
           <Button onClick={toggleTheme} variant="ghost" size="icon">
             {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </Button>
@@ -271,7 +265,7 @@ const HeroSection = () => (
     </div>
     <div className="flex justify-center">
       <div className="rounded-full overflow-hidden border-4 border-primary shadow-2xl w-[400px] h-[400px] flex items-center justify-center bg-muted">
-         <User className="h-48 w-48 text-gray-400" />
+         <Image src={personalInfo.avatar} alt="Foto de perfil de Sergio Bravo Mora" width={400} height={400} className="w-full h-full object-cover" data-ai-hint={personalInfo.avatarHint}/>
       </div>
     </div>
   </section>
