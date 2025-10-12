@@ -2,27 +2,27 @@
   "placeholderImages": [
     {
       "id": "profile-avatar",
-      "description": "A professional headshot of a software developer.",
+      "description": "A generic user avatar.",
       "imageUrl": "https://picsum.photos/seed/devfolio-avatar/400/400",
-      "imageHint": "person programmer"
+      "imageHint": "person avatar"
     },
     {
       "id": "project-1",
-      "description": "Screenshot of an e-commerce platform homepage.",
+      "description": "Screenshot of a portfolio website.",
       "imageUrl": "https://picsum.photos/seed/devfolio-proj1/600/400",
       "imageHint": "website design"
     },
     {
       "id": "project-2",
-      "description": "Screenshot of a data analytics dashboard UI.",
+      "description": "Abstract image representing cybersecurity.",
       "imageUrl": "https://picsum.photos/seed/devfolio-proj2/600/400",
-      "imageHint": "dashboard ui"
+      "imageHint": "security code"
     },
     {
       "id": "project-3",
-      "description": "Mockup of a mobile to-do list application.",
+      "description": "Image of a gaming setup or dashboard.",
       "imageUrl": "https://picsum.photos/seed/devfolio-proj3/600/400",
-      "imageHint": "mobile app"
+      "imageHint": "dashboard gaming"
     }
   ]
 }

@@ -37,21 +37,21 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 // --- DATA ---
 const personalInfo = {
-  name: "Carlos Sánchez",
-  role: "Desarrollador Full Stack",
-  motto: "Transformando ideas complejas en software elegante y funcional.",
+  name: "Sergio",
+  role: "Estudiante de Desarrollo Web",
+  motto: "Persona proactiva, responsable, con buenas relaciones interpersonales y empática, con capacidad de trabajar en equipo y con ganas de crecer.",
   avatar: PlaceHolderImages.find(p => p.id === 'profile-avatar')?.imageUrl || "https://picsum.photos/seed/devfolio-avatar/400/400",
   avatarHint: PlaceHolderImages.find(p => p.id === 'profile-avatar')?.imageHint || "person programmer"
 };
 
 const skills = {
   technical: [
+    { name: "HTML", icon: "html" },
+    { name: "CSS", icon: "css" },
+    { name: "JavaScript", icon: "javascript" },
     { name: "React", icon: "react" },
     { name: "Next.js", icon: "nextjs" },
     { name: "Node.js", icon: "nodejs" },
-    { name: "Python", icon: "python" },
-    { name: "TypeScript", icon: "typescript" },
-    { name: "Tailwind CSS", icon: "tailwind" },
   ],
   soft: [
     "Resolución de problemas",
@@ -59,35 +59,35 @@ const skills = {
     "Comunicación efectiva",
     "Pensamiento crítico",
     "Adaptabilidad",
-    "Creatividad",
+    "Proactividad",
   ],
 };
 
 const projects = [
   {
-    title: "Plataforma de E-commerce",
-    description: "Una solución de comercio electrónico completa con carrito de compras, pasarela de pagos y panel de administración de productos.",
+    title: "Portafolio Personal",
+    description: "Este mismo portafolio, creado para mostrar mis habilidades y proyectos. ¡Espero que te guste!",
     image: PlaceHolderImages.find(p => p.id === 'project-1')?.imageUrl || "https://picsum.photos/seed/devfolio-proj1/600/400",
     imageHint: PlaceHolderImages.find(p => p.id === 'project-1')?.imageHint || "website design",
-    tags: ["Next.js", "React", "Stripe", "PostgreSQL"],
+    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     live: "#",
     github: "#",
   },
   {
-    title: "Dashboard Analítico",
-    description: "Dashboard para visualización de datos en tiempo real, ayudando a las empresas a tomar decisiones basadas en métricas clave.",
+    title: "Proyecto de Ciberseguridad",
+    description: "Análisis y fortificación de sistemas para prevenir ataques, basado en los conocimientos adquiridos en mi formación.",
     image: PlaceHolderImages.find(p => p.id === 'project-2')?.imageUrl || "https://picsum.photos/seed/devfolio-proj2/600/400",
-    imageHint: PlaceHolderImages.find(p => p.id === 'project-2')?.imageHint || "dashboard ui",
-    tags: ["React", "D3.js", "Node.js", "WebSocket"],
+    imageHint: PlaceHolderImages.find(p => p.id === 'project-2')?.imageHint || "security code",
+    tags: ["Seguridad", "Redes", "Análisis de Vulnerabilidades"],
     live: "#",
     github: "#",
   },
   {
-    title: "Aplicación Móvil de Tareas",
-    description: "App móvil multiplataforma para gestionar tareas diarias, con notificaciones y sincronización en la nube.",
+    title: "Dashboard de Creación de Contenido",
+    description: "Concepto de un panel para gestionar y analizar el rendimiento de contenido de videojuegos en plataformas sociales.",
     image: PlaceHolderImages.find(p => p.id === 'project-3')?.imageUrl || "https://picsum.photos/seed/devfolio-proj3/600/400",
-    imageHint: PlaceHolderImages.find(p => p.id === 'project-3')?.imageHint || "mobile app",
-    tags: ["React Native", "Firebase", "TypeScript"],
+    imageHint: PlaceHolderImages.find(p => p.id === 'project-3')?.imageHint || "dashboard gaming",
+    tags: ["UI/UX", "Concepto", "Social Media"],
     live: "#",
     github: "#",
   },
@@ -95,22 +95,28 @@ const projects = [
 
 const experience = [
     {
-        date: "2021 - Presente",
-        title: "Desarrollador Full Stack",
-        company: "Tech Solutions Inc.",
-        description: "Desarrollo y mantenimiento de aplicaciones web. Colaboración en equipos ágiles para entregar soluciones de software de alta calidad."
+        date: "Junio 2023 - Agosto 2023",
+        title: "Auxiliar en telecomunicaciones",
+        company: "Empresa Wifi Villarrubia",
+        description: "Asistencia en levantar redes wifi y fibra óptica. Mantenimiento de portátiles."
     },
     {
-        date: "2020 - 2021",
-        title: "Desarrollador Frontend (Prácticas)",
-        company: "Innovatech",
-        description: "Participé en la creación de interfaces de usuario interactivas y responsivas para diversos clientes, utilizando React y Vue.js."
+        date: "2024 - Actual",
+        title: "Curso Desarrollo de Aplicaciones Web",
+        company: "Efamoratalaz-Manzanares",
+        description: "Formación actual en desarrollo de aplicaciones web full-stack, aprendiendo las últimas tecnologías del sector."
     },
     {
-        date: "2019 - 2020",
-        title: "Grado en Ingeniería de Software",
-        company: "Universidad Politécnica",
-        description: "Formación académica completa en los fundamentos de la ingeniería de software, algoritmos, y estructuras de datos."
+        date: "2023 - 2024",
+        title: "Curso en Ciberseguridad Informática",
+        company: "Villarrubia de los Ojos",
+        description: "Formación especializada en seguridad informática, protección de datos y análisis de vulnerabilidades."
+    },
+    {
+        date: "2018 - 2022",
+        title: "Bachiller en Humanidades",
+        company: "Instituto IES Guadiana",
+        description: "Base académica en humanidades, fomentando el pensamiento crítico y la capacidad de análisis."
     }
 ];
 
@@ -144,20 +150,19 @@ const TechIcons: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } = {
       <path fill="currentColor" d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM96.49,180a8,8,0,0,1-13,0L44,121.61V144a8,8,0,0,1-16,0V112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H51.61L90.06,174A8,8,0,0,1,96.49,180ZM224,144a8,8,0,0,1-8,8H176.4l20.8,25a8,8,0,1,1-11.2,11.2L164,163.6l-22.4,22.4a8,8,0,0,1-11.2-11.2l25-25H144a8,8,0,0,1-8-8V112a8,8,0,0,1,8-8h32a8,8,0,0,1,8,8v12.8l16-16a8,8,0,0,1,11.2,11.2L198.4,136H216A8,8,0,0,1,224,144Z"/>
     </svg>
   ),
-  python: (props) => (
+  html: (props) => (
     <svg {...props} viewBox="0 0 24 24">
-       <path fill="currentColor" d="M22 10.5c0-.83-.67-1.5-1.5-1.5H15V6.5C15 5.67 14.33 5 13.5 5H9.42c-.47 0-.92.21-1.23.58L5.5 9H3.5C2.67 9 2 9.67 2 10.5v8c0 .83.67 1.5 1.5 1.5h17c.83 0 1.5-.67 1.5-1.5v-8zM12 18H5v-5.5h7V18zm0-6.5H5.48L7.9 9H12v2.5zM19 18h-6v-6.5h6V18z"/>
+      <path fill="currentColor" d="m21.49 4.l-1.42 16L12 22.54l-8.07-2.53L2.51 4H21.49M12 7.27l4.53 0l.19-2.17H12V7.27m-2.58 0h2.58V5.1H9.69l.06.66l.09 1.45M10.1 11.27H12v2.17h-2.19l-.11-1.3l-.06-.55l-.06-.32h.22m2.11 0l-.06 2.17H14.4l.33-3.61l.1-1.12l.1-1.11H12v2.17h.21" />
     </svg>
   ),
-  typescript: (props) => (
-    <svg {...props} viewBox="0 0 128 128">
-      <path fill="#007ACC" d="M0 0h128v128H0z"/>
-      <path fill="#fff" d="M21.1 91.8V36.2h10.9v49.2h28.1v6.4H21.1zm61.7-49.2c4 0 7.2 1.2 9.8 3.5 2.6 2.3 3.9 5.5 3.9 9.5 0 4.2-1.3 7.5-4 9.9-2.7 2.4-6.1 3.6-10.2 3.6h-5.9v21.9h-11v-48.4h17.4zm-11 20.5h4.6c2.4 0 4.3-.6 5.6-1.7 1.3-1.2 2-2.9 2-5.1 0-2.3-.6-4-1.8-5.3-1.2-1.2-2.9-1.9-4.9-1.9h-5.5v14z"/>
+  css: (props) => (
+    <svg {...props} viewBox="0 0 24 24">
+     <path fill="currentColor" d="M12 22.54L3.93 20L2.51 4h18.98L20.07 20L12 22.54m6.11-14.07H7.89l.19 2.17h7.93l-.23 2.58h-7.6l.19 2.17h7.1l-.36 3.86l-2.91.8l-2.91-.8l-.2-2.17H5.88l.38 4.34L12 19.31l5.73-1.59l.82-9.13" />
     </svg>
   ),
-  tailwind: (props) => (
+  javascript: (props) => (
     <svg {...props} viewBox="0 0 24 24">
-      <path fill="currentColor" d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.23-2.106 2.354-5.88 2.439-8.232.228-2.349-2.109-5.979-2.039-8.242-.228-2.262-2.268-2.34-5.88-.236-8.23 2.108-2.354 5.882-2.439 8.232-.228zm0 0"/>
+      <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H9.5V11H7.5V9.5H11V17M17,17H15.5V12.25C15.5,11.56 15.22,11.12 14.34,11.12C13.5,11.12 13,11.53 13,12.34V17H11.5V9.5H13V10.5C13.3,9.92 13.94,9.5 14.67,9.5C15.82,9.5 17,10.3 17,11.93V17Z" />
     </svg>
   ),
 };
@@ -252,14 +257,9 @@ const HeroSection = () => (
       </div>
     </div>
     <div className="flex justify-center">
-      <Image
-        src={personalInfo.avatar}
-        width={400}
-        height={400}
-        alt="Foto de perfil"
-        className="rounded-full object-cover border-4 border-primary shadow-2xl"
-        data-ai-hint={personalInfo.avatarHint}
-      />
+      <div className="rounded-full overflow-hidden border-4 border-primary shadow-2xl w-[400px] h-[400px] flex items-center justify-center bg-muted">
+         <User className="h-48 w-48 text-gray-400" />
+      </div>
     </div>
   </section>
 );
@@ -374,7 +374,7 @@ const ContactSection = () => {
         resolver: zodResolver(contactFormSchema),
         defaultValues: {
             name: "",
-            email: "",
+            email: "sergiobmnv@gmail.com",
             message: "",
         },
     });
@@ -452,7 +452,7 @@ const ContactSection = () => {
                             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                                 <Linkedin className="h-10 w-10" />
                             </a>
-                            <a href="mailto:email@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+                            <a href="mailto:sergiobmnv@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                                 <Mail className="h-10 w-10" />
                             </a>
                         </div>
@@ -477,7 +477,7 @@ const Footer = () => (
         <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
           <Linkedin className="h-5 w-5" />
         </a>
-        <a href="mailto:email@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+        <a href="mailto:sergiobmnv@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
           <Mail className="h-5 w-5" />
         </a>
       </div>
