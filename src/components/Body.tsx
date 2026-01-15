@@ -95,13 +95,7 @@ const projects = [
 
 const experience = [
     {
-        date: "Junio 2023 - Agosto 2023",
-        title: "Auxiliar en telecomunicaciones",
-        company: "Empresa Wifi Villarrubia",
-        description: "Asistencia en levantar redes wifi y fibra óptica. Mantenimiento de portátiles."
-    },
-    {
-        date: "2024 - Actual",
+        date: "2026 - Actual",
         title: "Curso Desarrollo de Aplicaciones Web",
         company: "Efamoratalaz-Manzanares",
         description: "Formación actual en desarrollo de aplicaciones web full-stack, aprendiendo las últimas tecnologías del sector."
@@ -113,10 +107,10 @@ const experience = [
         description: "Formación especializada en seguridad informática, protección de datos y análisis de vulnerabilidades."
     },
     {
-        date: "2018 - 2022",
-        title: "Bachiller en Humanidades",
-        company: "Instituto IES Guadiana",
-        description: "Base académica en humanidades, fomentando el pensamiento crítico y la capacidad de análisis."
+        date: "Junio 2023 - Agosto 2023",
+        title: "Auxiliar en telecomunicaciones",
+        company: "Empresa Wifi Villarrubia",
+        description: "Asistencia en levantar redes wifi y fibra óptica. Mantenimiento de portátiles."
     }
 ];
 
