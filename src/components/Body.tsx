@@ -65,13 +65,13 @@ const skills = {
 
 const projects = [
   {
-    title: "Portafolio Personal",
+    title: "Proyecto-SportM7",
     description: "Este mismo portafolio, creado para mostrar mis habilidades y proyectos. ¡Espero que te guste!",
     image: PlaceHolderImages.find(p => p.id === 'project-1')?.imageUrl || "https://picsum.photos/seed/devfolio-proj1/600/400",
     imageHint: PlaceHolderImages.find(p => p.id === 'project-1')?.imageHint || "website design",
-    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
-    live: "#",
-    github: "#",
+    tags: ["React", "Vite","TypeScript", "JavaScript", "HTML5", "CSS3"],
+    live: "https://proyecto-sportm7.vercel.app/",
+    github: "https://github.com/sergiobmnv/Proyecto-sportm7",
   },
   {
     title: "Proyecto de Ciberseguridad",
