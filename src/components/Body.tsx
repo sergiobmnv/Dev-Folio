@@ -67,30 +67,12 @@ const projects = [
   {
     title: "Proyecto-SportM7",
     description: "Este mismo portafolio, creado para mostrar mis habilidades y proyectos. ¡Espero que te guste!",
-    image: PlaceHolderImages.find(p => p.id === 'project-1')?.imageUrl || "https://picsum.photos/seed/devfolio-proj1/600/400",
+    image: "/assets/logo.png",
     imageHint: PlaceHolderImages.find(p => p.id === 'project-1')?.imageHint || "website design",
     tags: ["React", "Vite","TypeScript", "JavaScript", "HTML5", "CSS3"],
     live: "https://proyecto-sportm7.vercel.app/",
     github: "https://github.com/sergiobmnv/Proyecto-sportm7",
-  },
-  {
-    title: "Proyecto de Ciberseguridad",
-    description: "Análisis y fortificación de sistemas para prevenir ataques, basado en los conocimientos adquiridos en mi formación.",
-    image: PlaceHolderImages.find(p => p.id === 'project-2')?.imageUrl || "https://picsum.photos/seed/devfolio-proj2/600/400",
-    imageHint: PlaceHolderImages.find(p => p.id === 'project-2')?.imageHint || "security code",
-    tags: ["Seguridad", "Redes", "Análisis de Vulnerabilidades"],
-    live: "#",
-    github: "#",
-  },
-  {
-    title: "Dashboard de Creación de Contenido",
-    description: "Concepto de un panel para gestionar y analizar el rendimiento de contenido de videojuegos en plataformas sociales.",
-    image: PlaceHolderImages.find(p => p.id === 'project-3')?.imageUrl || "https://picsum.photos/seed/devfolio-proj3/600/400",
-    imageHint: PlaceHolderImages.find(p => p.id === 'project-3')?.imageHint || "dashboard gaming",
-    tags: ["UI/UX", "Concepto", "Social Media"],
-    live: "#",
-    github: "#",
-  },
+  }
 ];
 
 const experience = [
